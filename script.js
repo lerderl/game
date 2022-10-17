@@ -43,6 +43,7 @@ function play(playerSelection, computerSelection) {
 // Function to play all rounds of the game
 function game() {
   for (let i = 0; i < 5; i++) {
+    console.log(`ROUND ${i + 1}`);
     const playerOptions = ["rock", "paper", "scissors"];
     let playerSelection = window.prompt("Enter your option");
     if (!playerOptions.includes(playerSelection)) {

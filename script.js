@@ -38,15 +38,18 @@ function play(playerSelection, computerSelection) {
       return `You Win! ${playerSelection} beats computer selection of ${computerSelection}`;
     }
   }
-  else {
-    alert("Please enter the right option of either rock, paper or scissors");
-  }
 };
 
 // Function to play all rounds of the game
 function game() {
   for (let i = 0; i < 5; i++) {
+    const playerOptions = ["rock", "paper", "scissors"];
     let playerSelection = window.prompt("Enter your option");
+    if (!playerOptions.includes(playerSelection)) {
+      alert("Please enter the right option of either rock, paper or scissors");
+      i--;
+      continue;
+    }
     let computerSelection = computerPlay();
     console.log(play(playerSelection, computerSelection));
   };

@@ -80,9 +80,8 @@ buttons.forEach(button => {
   button.addEventListener('click', () => {
     let playerSelection = button.id;
     let computerSelection = computerPlay();
-    console.log(play(playerSelection, computerSelection));
+    play(playerSelection, computerSelection);
+    document.getElementById("playerScore").textContent = `${playerScore}`;
+    document.getElementById("computerScore").textContent = `${computerScore}`;
   })
 });
-
-// const playerResult = document.getElementById("playerScore");
-// console.log(playerResult);

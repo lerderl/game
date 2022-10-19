@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  max-width: 48rem;
+  width: 90%;
+}
+.row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin-top: 5px;
+}
+.item {
+  flex: 1;
+}
+.center {
+  text-align: center;
+}
